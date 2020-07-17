@@ -257,7 +257,7 @@ button {
 
 /* Home */
 #home {
-  background-image: url(/images/homebackground.png);
+  background-image: url(images/homebackground.png);
   text-align: center;
   padding: 40px;
 }
@@ -521,4 +521,30 @@ button {
 
 .testimonial__speech-bubble a {
   color: var(--color-pink);
+}
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-pink);
+}
+
+#contact h1,
+#contact h2,
+.contact__rights {
+  color: var(--color-whtie);
+}
+
+.contact__links {
+  font-size: var(--font--large);
+  margin: 24px;
+  transition: var(--animation--duration);
+}
+
+.contact__github:hover {
+  cursor: pointer;
+  color: var(--color-yellow);
+}
+.contact__rights {
+  color: var(--color-light-white);
 }
