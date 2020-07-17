@@ -28,6 +28,7 @@
   --weight-regular: 400;
 
   /* Size */
+  --size-border-radius: 4px;
 }
 /* Reset Css */
 html,
@@ -158,6 +159,7 @@ table {
 /* Universal tags */
 * {
   box-sizing: border-box;
+  cursor: default;
 }
 
 h1 {
@@ -186,4 +188,45 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-blank);
   margin: 4px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-whtie);
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  margin: 10px 0;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: var(--color-whtie);
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-whtie);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
