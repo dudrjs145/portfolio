@@ -557,7 +557,7 @@ button {
 }
 
 .contact__links {
-  font-size: var(--font--large);
+  font-size: var(--font-large);
   margin: 24px;
   transition: var(--animation--duration);
 }
@@ -568,6 +568,28 @@ button {
 }
 .contact__rights {
   color: var(--color-light-white);
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  opacity: 0;
+  transition: var(--animation--duration);
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* For below 768px screen width */
@@ -606,5 +628,11 @@ button {
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .arrow-up {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
   }
 }
