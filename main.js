@@ -64,14 +64,19 @@ const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (event) => {
-  const filter =
-    event.target.dataset.filter || event.target.parentNode.dataset.filter;
+  const target = event.target || event.target.parentNode;
+  const filter = target.dataset.filter;
 
   if (filter == null) {
     return;
   }
-  projectContainer.classList.add("anim-out");
 
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  target.classList.add("selected");
+
+  projectContainer.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
       console.log(project.dataset.type);
@@ -84,3 +89,4 @@ workBtnContainer.addEventListener("click", (event) => {
     projectContainer.classList.remove("anim-out");
   }, 300);
 });
+s;
