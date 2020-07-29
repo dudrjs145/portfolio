@@ -235,7 +235,7 @@ button {
 
 #navbar.navbar--dark {
   background-color: var(--color-pink);
-  padding: 8px;
+  padding: 8px 16px;
   z-index: 2;
 }
 
@@ -270,6 +270,12 @@ button {
   color: var(--color-whtie);
   font-size: 24px;
   display: none;
+}
+
+.navbar__toggle-btn:hover,
+.navbar__toggle-btn i:hover,
+.navbar__toggle-btn svg:hover {
+  cursor: pointer;
 }
 
 /* Home */
@@ -493,7 +499,7 @@ button {
 }
 
 .project__description h3 {
-  color: var(--color-whtie);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -505,7 +511,7 @@ button {
   height: 2px;
   margin-left: -12px;
   margin-top: 8px;
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-white);
 }
 
 /* Testimonals */
@@ -609,13 +615,18 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
   }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+  }
   .about__majors {
     flex-direction: column;
     align-items: center;

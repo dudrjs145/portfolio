@@ -21,7 +21,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle burtton for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", (event) => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle click on "contact me" button on home
@@ -89,4 +96,3 @@ workBtnContainer.addEventListener("click", (event) => {
     projectContainer.classList.remove("anim-out");
   }, 300);
 });
-s;
